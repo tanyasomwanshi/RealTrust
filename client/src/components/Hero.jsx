@@ -15,7 +15,10 @@ const Hero = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/contact", formData);
+      await axios.post(
+        "https://realtrust-85bg.onrender.com/api/contact",
+        formData
+      );
       alert("Request submitted!");
       setFormData({ fullName: "", email: "", mobile: "", city: "" });
     } catch (err) {
